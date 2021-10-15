@@ -19,31 +19,31 @@ const Homepage = () => {
             <Title level={2} className="heading">
                 Global Crypto Stats
             </Title>
-            <Row>
+            <Row style={{marginLeft: 'auto'}}>
                 <Col span={12}>
-                    <Statistic title="Total Cryptocurrencies" value={globalStats.total} />
+                    <Statistic title={<p className="statistics-heading">Total Cryptocurrencies</p>} value={globalStats.total} />
+                </Col>
+                <Col span={12} className="statistic-col">
+                    <Statistic className="statistic-item" title={<p className="statistics-heading">Total Exchanges</p>} value={millify(globalStats.totalExchanges)} />
                 </Col>
                 <Col span={12}>
-                    <Statistic title="Total Exchanges" value={millify(globalStats.totalExchanges)} />
+                    <Statistic title={<p className="statistics-heading">Total Market Cap</p>} value={millify(globalStats.totalMarketCap)} />
+                </Col>
+                <Col span={12} className="statistic-col">
+                    <Statistic className="statistic-item" title={<p className="statistics-heading">Total 24h Volume</p>} value={millify(globalStats.total24hVolume)} />
                 </Col>
                 <Col span={12}>
-                    <Statistic title="Total Market Cap" value={millify(globalStats.totalMarketCap)} />
-                </Col>
-                <Col span={12}>
-                    <Statistic title="Total 24h Volume" value={millify(globalStats.total24hVolume)} />
-                </Col>
-                <Col span={12}>
-                    <Statistic title="Total Markets" value={millify(globalStats.totalMarkets)} />
+                    <Statistic title={<p className="statistics-heading">Total Markets</p>} value={millify(globalStats.totalMarkets)} />
                 </Col>
             </Row>
             <div className="home-heading-container">
-                <Title level={2} className="home-title">Top 10 Cryptocurrencies in the world</Title>
-                <Title level={3} className="show-more"><Link to='/cryptocurrencies'>Show More</Link></Title>
+                <Title level={3} className="home-title">Top 10 Cryptocurrencies in the world</Title>
+                <Title level={5} className="show-more"><Link to='/cryptocurrencies'>Show More</Link></Title>
             </div>
             <Cryptocurrencies simplified />
             <div className="home-heading-container">
-                <Title level={2} className="home-title">Latest Crypto News</Title>
-                <Title level={3} className="show-more"><Link to='/news'>Show More</Link></Title>
+                <Title level={3} className="home-title">Latest Crypto News</Title>
+                <Title level={5} className="show-more"><Link to='/news'>Show More</Link></Title>
             </div>
             <News simplified />
         </>

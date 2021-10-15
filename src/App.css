@@ -59,20 +59,20 @@ a:hover{
   padding: 20px;
 }
 .nav-container{
-  /* position: fixed;
-  left: 0; */
   margin: 10px;
   height: 100vh;
   margin: 0px;
   background-color: rgb(0, 21, 41);
 }
-
 .logo-container{
   background-color: #001529;
   display: flex;
   padding: 20px;
   align-items: center;
   width: 100%;
+}
+.logo-container h2 {
+    margin-bottom: 0 !important;
 }
 .logo{
   margin:0 0 0 15px;
@@ -96,7 +96,10 @@ a:hover{
   justify-content: center;
   align-items: center;
 }
-
+.statistics-heading {
+    font-family: poppins-med !important;
+    margin-bottom: 0 !important;
+}
 .crypto-card-info {
     font-family: poppins-semibold;
 }
@@ -112,6 +115,11 @@ a:hover{
 
 .coin-details-heading {
     text-align: justify;
+}
+
+.coin-details-heading:first-of-type p {
+    font-weight: normal;
+    font-family: poppins-med;
 }
 
 @media screen and (max-width:1300px){
@@ -144,7 +152,7 @@ a:hover{
 
   .main{
       flex: 1;
-      margin-top: 90px;
+      margin-top: 80px;
       margin-left: 0px;
       margin-right: 10px;
   }
@@ -271,6 +279,7 @@ a:hover{
 }
 
 .coin-desc{
+  text-align: justify;
   flex: 0.5;
 }
 
@@ -324,24 +333,43 @@ padding: 0px 20px;
 }
 @media screen and (max-width: 500px){
   .heading{
+      text-align: center;
       margin-top: 20px;
   }
+  .statistic-col {
+      /* display: flex !important; */
+      text-align: right;
+  }
+  .statistic-item {
+      text-align: right;
+    /* margin-left: auto !important; */
+  }
 }
-
 .select-news{
   width: 180px;
 }
 .news-card{
   min-height: 300px !important;
+  position: relative;
 }
 .news-image-container{
   display: flex !important;
   justify-content: space-between !important;
 }
 .news-title{
-color: #fff !important;
-position: relative;
-z-index: 1;
+  color: #fff !important;
+  position: relative;
+  z-index: 1;
+
+}
+.news-desc span {
+    margin-left: 5px;
+    font-size: 0.7rem;
+    color: #83ecff;
+    font-weight: normal !important;
+}
+.news-desc span:hover {
+    text-decoration: underline;
 }
 .news-image-container .img{
   width:100px;
@@ -355,22 +383,27 @@ z-index: 1;
   z-index: 1;
 }
 .provider-container{
+  position: absolute;
+  bottom: -2px;
+  left: 0px;
+  padding: 10px 20px 10px 15px;
+  z-index: 1;
+  font-size: 0.7rem;
   display: flex;
   justify-content: space-between;
-  color: #fff !important;
-  position: relative;
-  z-index: 1;
+  align-items: center;
+  width: 100%;
+  background: #0071bd;
+  border-radius: 10px 10px 0 0;
+}
+.provider-container div span:first-of-type {
+    margin-right: 7px;
 }
 .provider-name{
-  margin-left: 10px;
   color: #fff !important;
-  position: relative;
-  z-index: 1;
 }
 .time {
   color: #fff !important;
-  position: relative;
-  z-index: 1;
 }
 .chart-header{
   display: flex;
@@ -400,6 +433,9 @@ z-index: 1;
   align-items: center;
   margin-top: 40px;
 }
+.home-heading-container h5 {
+    font-size: 1rem !important;
+}
 .show-more{
   margin-top: 0px !important;
 }
@@ -425,8 +461,17 @@ z-index: 1;
 .select-timeperiod{
   width: 200px !important;
   margin-top: 20px !important;
+  margin-bottom: 10px !important;
 }
-
+.trend-icon {
+    width: 20px;
+    margin-right: 2px;
+    filter: brightness(0) saturate(100%) invert(24%) sepia(97%) saturate(7409%) hue-rotate(345deg) brightness(90%) contrast(127%);
+}
+.trend-icon.increase {
+    filter: brightness(0) saturate(100%) invert(60%) sepia(10%) saturate(2336%) hue-rotate(72deg) brightness(95%) contrast(96%);
+    transform: rotate(180deg);
+}
 .footer {
   background-color: #001529;
   display: flex;

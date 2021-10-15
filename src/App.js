@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Switch, Route, NavLink } from 'react-router-dom';
 import { Layout, Typography, Space } from 'antd';
 import { Navbar, Homepage, Exchanges, Cryptocurrencies, CryptoDetails, News } from './components';
@@ -6,6 +6,11 @@ import { Navbar, Homepage, Exchanges, Cryptocurrencies, CryptoDetails, News } fr
 import './App.css';
 
 function App() {
+
+    useEffect(() => {
+        window.scrollTo({top: 0, behavior: 'smooth'})
+    }, []);
+
     return (
         <div className="app">
             <div className="navbar">

@@ -45,15 +45,19 @@ const News = ({ simplified }) => {
                             <div className="bg-image" style={{background:`url(${news?.image?.thumbnail?.contentUrl || demoImage}) no-repeat center/cover`}}>
                                 <div className="overlay"></div>
                             </div>
-                            <a href={news.url} target="_blank" rel="noopener noreferrer">
+                            <a href={news.url} target="_blank" rel="noopener noreferrer" style={{height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
                                 <div className="news-image-container">
-                                    <Title className="news-title" level={4}>{news.name}</Title>
-                                    {/* <img style={{ maxHeight: '100px', maxWidth: '200px' }} src={news?.image?.thumbnail?.contentUrl || demoImage} alt="news" /> */}
+                                    <Title className="news-title" level={5}>{
+                                        // news.name.length > 50 ?
+                                        // <>{news.name.substring(0, 50)}<span>(click for more)</span></>
+                                        // :
+                                        news.name
+                                    }</Title>
                                 </div>
-                                <p>
+                                <p className="news-desc">
                                     {
-                                        news.description > 100 ?
-                                            `${news.description.substring(0, 100)} ...`
+                                        news.description.length > 100 ?
+                                            <>{news.description.substring(0, 100)}... <span>(Read More)</span></>
                                             :
                                             news.description
                                     }
