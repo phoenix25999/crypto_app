@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/crypto_app/static/css/main.31a02981.chunk.css",
-    "main.js": "/crypto_app/static/js/main.39c54d42.chunk.js",
-    "main.js.map": "/crypto_app/static/js/main.39c54d42.chunk.js.map",
+    "main.js": "/crypto_app/static/js/main.aa39116d.chunk.js",
+    "main.js.map": "/crypto_app/static/js/main.aa39116d.chunk.js.map",
     "runtime-main.js": "/crypto_app/static/js/runtime-main.f455d528.js",
     "runtime-main.js.map": "/crypto_app/static/js/runtime-main.f455d528.js.map",
     "static/css/2.f7861fd5.chunk.css": "/crypto_app/static/css/2.f7861fd5.chunk.css",
@@ -11,7 +11,7 @@
     "static/js/3.13f1c16f.chunk.js": "/crypto_app/static/js/3.13f1c16f.chunk.js",
     "static/js/3.13f1c16f.chunk.js.map": "/crypto_app/static/js/3.13f1c16f.chunk.js.map",
     "index.html": "/crypto_app/index.html",
-    "precache-manifest.4bf81dc5607eacd9404fc07601d41328.js": "/crypto_app/precache-manifest.4bf81dc5607eacd9404fc07601d41328.js",
+    "precache-manifest.ed0bc240dc884f2d5b98012cbcfbc98b.js": "/crypto_app/precache-manifest.ed0bc240dc884f2d5b98012cbcfbc98b.js",
     "service-worker.js": "/crypto_app/service-worker.js",
     "static/css/2.f7861fd5.chunk.css.map": "/crypto_app/static/css/2.f7861fd5.chunk.css.map",
     "static/css/main.31a02981.chunk.css.map": "/crypto_app/static/css/main.31a02981.chunk.css.map",
@@ -23,6 +23,6 @@
     "static/css/2.f7861fd5.chunk.css",
     "static/js/2.e2b20fe7.chunk.js",
     "static/css/main.31a02981.chunk.css",
-    "static/js/main.39c54d42.chunk.js"
+    "static/js/main.aa39116d.chunk.js"
   ]
 }
