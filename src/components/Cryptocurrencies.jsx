@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import millify from 'millify';
-import { Card, Row, Col, Input } from 'antd';
+import { Card, Row, Col, Input, Typography } from 'antd';
 import { Link } from 'react-router-dom';
 import { useGetCryptosQuery } from '../services/cryptoApi';
 import { Loader } from './';
+
+const { Text } = Typography;
 
 const Cryptocurrencies = ({ simplified }) => {
 
@@ -33,13 +35,13 @@ const Cryptocurrencies = ({ simplified }) => {
                         <Col xs={24} lg={6} className="crypto-card" key={currency.id}>
                             <Link to={`/crypto/${currency.id}`}>
                                 <Card
-                                    title={`${currency.rank}. ${currency.name}`}
+                                    title={<Text strong>{currency.rank}. {currency.name}</Text>}
                                     extra={<img src={currency.iconUrl} className="crypto-image" alt="" />}
                                     hoverable
                                 >
-                                    <p>Price: {millify(currency.price)}</p>
-                                    <p>Market Cap: {millify(currency.marketCap)}</p>
-                                    <p>Daily Change: {millify(currency.change)}</p>
+                                    <p className="crypto-card-info"><span>Price: </span> {millify(currency.price)}</p>
+                                    <p className="crypto-card-info"><span>Market Cap: </span>  {millify(currency.marketCap)}</p>
+                                    <p className="crypto-card-info"><span>Daily Change: </span>  {millify(currency.change)}</p>
                                 </Card>
                             </Link>
                         </Col>

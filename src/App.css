@@ -1,3 +1,23 @@
+@font-face {
+    font-family: 'poppins-reg';
+    src: url('./assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'poppins-med';
+    src: url('./assets/fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'poppins-semibold';
+    src: url('./assets/fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'poppins-bold';
+    src: url('./assets/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+}
+
 :root{
   --text-primary:#000;
   --bgPrimary:#fff;
@@ -11,6 +31,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: poppins-reg;
 }
 
 a:hover{
@@ -74,6 +95,23 @@ a:hover{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.crypto-card-info {
+    font-family: poppins-semibold;
+}
+
+.crypto-card-info span {
+    color: #999;
+    font-family: poppins-med;
+}
+
+.coin-value-statistics-heading {
+    text-align: center;
+}
+
+.coin-details-heading {
+    text-align: justify;
 }
 
 @media screen and (max-width:1300px){
