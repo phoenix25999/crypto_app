@@ -167,6 +167,7 @@ a:hover{
   }
   .home-title{
       font-size: 1.4rem !important;
+      margin-right: 10px;
   }
   .show-more{
       font-size: 1.3rem !important;
