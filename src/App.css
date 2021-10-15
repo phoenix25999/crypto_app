@@ -113,10 +113,6 @@ a:hover{
     text-align: center;
 }
 
-.coin-details-heading {
-    text-align: justify;
-}
-
 .coin-details-heading:first-of-type p {
     font-weight: normal;
     font-family: poppins-med;

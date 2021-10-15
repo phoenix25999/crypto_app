@@ -32,7 +32,7 @@ const Navbar = () => {
             <div className="logo-container">
                 <Avatar src={Icon} size="large" />
                 <Typography.Title level={2} className="logo">
-                    <NavLink to='/'>Cryptoverse</NavLink>
+                    <NavLink onClick={()=>setActiveMenu(false)} to='/'>Cryptoverse</NavLink>
                 </Typography.Title>
                 <Button className="menu-control-container" onClick={()=>setActiveMenu(!activeMenu)}>
                     <MenuOutlined />
@@ -41,16 +41,16 @@ const Navbar = () => {
             {activeMenu &&
             <Menu theme="dark">
                 <Menu.Item icon={<HomeOutlined />}>
-                    <NavLink to="/">Home</NavLink>
+                    <NavLink onClick={()=>setActiveMenu(false)} to="/">Home</NavLink>
                 </Menu.Item>
                 <Menu.Item icon={<FundOutlined />}>
-                    <NavLink to="/cryptocurrencies">Cryptocurrencies</NavLink>
+                    <NavLink onClick={()=>setActiveMenu(false)} to="/cryptocurrencies">Cryptocurrencies</NavLink>
                 </Menu.Item>
                 <Menu.Item icon={<MoneyCollectOutlined />}>
-                    <NavLink to="/exchanges">Exchanges</NavLink>
+                    <NavLink onClick={()=>setActiveMenu(false)} to="/exchanges">Exchanges</NavLink>
                 </Menu.Item>
                 <Menu.Item icon={<BulbOutlined />}>
-                    <NavLink to="/news">News</NavLink>
+                    <NavLink onClick={()=>setActiveMenu(false)} to="/news">News</NavLink>
                 </Menu.Item>
             </Menu>}
         </div>
