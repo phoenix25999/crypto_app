@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, Link } from 'react-router-dom';
+import { Switch, Route, Link, NavLink } from 'react-router-dom';
 import { Layout, Typography, Space } from 'antd';
 import { Navbar, Homepage, Exchanges, Cryptocurrencies, CryptoDetails, News } from './components';
 
@@ -18,16 +18,16 @@ function App() {
                             <Route exact path='/'>
                                 <Homepage />
                             </Route>
-                            <Route exact path='/exchanges'>
+                            <Route path='/exchanges'>
                                 <Exchanges />
                             </Route>
-                            <Route exact path='/cryptocurrencies'>
+                            <Route path='/cryptocurrencies'>
                                 <Cryptocurrencies />
                             </Route>
-                            <Route exact path='/crypto/:coinId'>
+                            <Route path='/crypto/:coinId'>
                                 <CryptoDetails />
                             </Route>
-                            <Route exact path='/news'>
+                            <Route path='/news'>
                                 <News />
                             </Route>
                         </Switch>
@@ -39,9 +39,9 @@ function App() {
                         Al rights reserved
                     </Typography.Title>
                     <Space>
-                        <Link to='/home'>Home</Link>
-                        <Link to='/exchanges'>Exchanges</Link>
-                        <Link to='/news'>News</Link>
+                        <NavLink to='/home'>Home</NavLink>
+                        <NavLink to='/exchanges'>Exchanges</NavLink>
+                        <NavLink to='/news'>News</NavLink>
                     </Space>
                 </div>
             </div>
