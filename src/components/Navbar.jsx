@@ -27,12 +27,18 @@ const Navbar = () => {
         }
     }, [screenSize]);
 
+    const onNavClick = () => {
+        if(screenSize <= 768) {
+            setActiveMenu(false);
+        }
+    };
+
     return (
         <div className="nav-container" style={{width: '100%'}}>
             <div className="logo-container">
                 <Avatar src={Icon} size="large" />
                 <Typography.Title level={2} className="logo">
-                    <NavLink onClick={()=>setActiveMenu(false)} to='/'>Cryptoverse</NavLink>
+                    <NavLink onClick={onNavClick} to='/'>Cryptoverse</NavLink>
                 </Typography.Title>
                 <Button className="menu-control-container" onClick={()=>setActiveMenu(!activeMenu)}>
                     <MenuOutlined />
@@ -41,16 +47,16 @@ const Navbar = () => {
             {activeMenu &&
             <Menu theme="dark">
                 <Menu.Item icon={<HomeOutlined />}>
-                    <NavLink onClick={()=>setActiveMenu(false)} to="/">Home</NavLink>
+                    <NavLink onClick={onNavClick} to="/">Home</NavLink>
                 </Menu.Item>
                 <Menu.Item icon={<FundOutlined />}>
-                    <NavLink onClick={()=>setActiveMenu(false)} to="/cryptocurrencies">Cryptocurrencies</NavLink>
+                    <NavLink onClick={onNavClick} to="/cryptocurrencies">Cryptocurrencies</NavLink>
                 </Menu.Item>
                 <Menu.Item icon={<MoneyCollectOutlined />}>
-                    <NavLink onClick={()=>setActiveMenu(false)} to="/exchanges">Exchanges</NavLink>
+                    <NavLink onClick={onNavClick} to="/exchanges">Exchanges</NavLink>
                 </Menu.Item>
                 <Menu.Item icon={<BulbOutlined />}>
-                    <NavLink onClick={()=>setActiveMenu(false)} to="/news">News</NavLink>
+                    <NavLink onClick={onNavClick} to="/news">News</NavLink>
                 </Menu.Item>
             </Menu>}
         </div>
